@@ -1,10 +1,17 @@
-#Analysis for "Reversed graph embedding resolves complex single-cell trajectories"
+# Analysis for "Reversed graph embedding resolves complex single-cell trajectories"
 
 ## Introduction
-This distribution includes all analysis and figure generation performed for our manuscript, "Reversed graph embedding resolves complex single-cell trajectories". In order to run all the code included, you need to install six packages we prepared for this project (See more details in file install_packages.R).
+This distribution includes all analysis and figure generation performed for our paper, [Reversed graph embedding resolves complex single-cell trajectories](https://www.nature.com/nmeth/journal/vaop/ncurrent/full/nmeth.4402.html). In order to run all the code included, you need to install six packages we prepared for this project (See more details in file install_packages.R).
 
 # Jupyter notebook: 
-A remarkable result of Monocle 2 is its capability to automatically resolve complicate developmental trajectory. In addition to all code we have wrote, we also provided a jupyter notebook to reproduce the developmental trajectory for the Paul (which includes five branch points and six lineages) as well as the Olsson datasets (includes two branch points). See the folder Jupyter_notebook
+A remarkable result of Monocle 2 is its capability to automatically resolve complicate developmental trajectory. In addition to all code we have wrote, we also provided a jupyter notebook to reproduce the developmental trajectory for the Paul (which includes five branch points and six lineages) as well as the Olsson datasets (includes two branch points). See the folder `Jupyter_notebook`
+
+# Citation: 
+If you find Monocle 1 or Monocle 2 helps you to analyze the single cell RNA-seq dataset, please cite the following papers: 
+1. Monocle 1: Trapnell, Cole, et al. "The dynamics and regulators of cell fate decisions are revealed by pseudotemporal ordering of single cells." Nature biotechnology 32.4 (2014): 381-386.
+APA	
+2. Monocle 2: Qiu, Xiaojie, et al. "Single-cell mRNA quantification and differential analysis with Census." Nature methods 14.3 (2017): 309.
+3. Monocle 2: Qiu, Xiaojie, et al. "Reversed graph embedding resolves complex single-cell trajectories." Nature methods (2017).
 
 # Necessary datasets (for example, gene expression matrix, cell or gene annotation file, etc.) can be downloaded from here: 
 https://github.com/cole-trapnell-lab/monocle2-rge-paper
@@ -15,7 +22,7 @@ https://github.com/cole-trapnell-lab/monocle2-rge-paper
 - To reproduce exactly the result as in the paper, the same packages included here may be necessary (This is because Monocle 2 is still under active development). 
 - We suggest the user to look first at the Jupyter notebook which highlights Monocle 2's capabilities to accurately and robustly resolve the developmental trajectory before digging into other complicated analysis performed in this study 
 
-##Requirements
+## Requirements
 - Memory: We have tested all scripts with 32G of memory (RAM), but the memory usage in reality is much lower for most of the analysis
 - Operating system: We performed all our analysis on a ​iMac (3.5 GHz Intel Core i7, 32 GB 1600 MHz DDR3), but Linux and other Unix-based operating systems should also work
 - Tools: 
@@ -25,15 +32,15 @@ https://github.com/cole-trapnell-lab/monocle2-rge-paper
 
 Before running any scripts, you must:
 - Download the required data and unzip:
-wget http://www.gs.washington.edu/~xqiu/proj2/RGE_analysis_data.tar.gz
-tar -zxvf RGE_analysis_data.tar.gz
-rm RGE_analysis_data.tar.gz
+ 1. wget http://www.gs.washington.edu/~xqiu/proj2/RGE_analysis_data.tar.gz
+ 2. tar -zxvf RGE_analysis_data.tar.gz
+ 3. rm RGE_analysis_data.tar.gz
 
 - Make the relevant destination directories
-mkdir Figure/main_figure Figure/supplementary_figures RData tmp
+ 1. mkdir Figure/main_figure Figure/supplementary_figures RData tmp
 
 - Install all R packages (this may require user interaction to confirm permission to update existing packages):
-Rscript install_packages.R
+ 1. Rscript install_packages.R
 
 Once this is complete, individual analyses may be run. The following is a list of all scripts and their dependencies (all dependencies must be run before running a given script):
 
@@ -67,19 +74,19 @@ Benchmarking Analysis (algorithm robustness and accuracy; Parameters robustness)
 - analysis_DDRTree_all_parameters.r (depends on results from analysis_DDRTree_parameters.r)
 
 Shalek Data
-analysis_shalek_data.R (no dependencies)
-gen_shalek_figures.R (depdends on results from analysis_shalek_data.R)
+- analysis_shalek_data.R (no dependencies)
+- gen_shalek_figures.R (depdends on results from analysis_shalek_data.R)
 
 Other:
 - calculate_monocle12_slicer_wishbone_dpt_downsampling.r (no dependencies)
 - dpFeature_for_all_datasets.r (depends on all the above code)  
 - gen_simulation_dpt_DDRTree_finalized_figure.r
 
-##DHS analysis: 
+## DHS analysis: 
 Quake_intersect_dhs.sh and Shalek_intersect_dhs.sh are the shell scripts used to perform the DHS analysis disussed in the supplementary file. For simplicity, we only provided the output gmt files in the data folder for the current distribution.  
 
 New scripts used to generated new figures since the first revision (all depends on script above excepting deg_benchmark_analysis_HSMM_bulk): 
-#(folder: revision_1)
+# (folder: revision_1)
 - revision_1_HSMM_myo_other_software.R		
 - revision_1_comparison_across_software.R		
 - revision_1_empirical_downsample_downsampling.R	
