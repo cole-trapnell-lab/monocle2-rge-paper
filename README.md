@@ -3,18 +3,19 @@
 ## Introduction
 This distribution includes all analysis and figure generation performed for our paper, [Reversed graph embedding resolves complex single-cell trajectories](https://www.nature.com/nmeth/journal/vaop/ncurrent/full/nmeth.4402.html). In order to run all the code included, you need to install six packages we prepared for this project (See more details in file install_packages.R).
 
-# Jupyter notebook: 
+# Jupyter notebook 
 A remarkable result of Monocle 2 is its capability to automatically resolve complicate developmental trajectory. In addition to all code we have wrote, we also provided a jupyter notebook to reproduce the developmental trajectory for the Paul (which includes five branch points and six lineages) as well as the Olsson datasets (includes two branch points). See the folder `Jupyter_notebook`
 
-# Citation: 
+# Citation
 If you find Monocle 1 or Monocle 2 helps you to analyze the single cell RNA-seq dataset, please cite the following papers: 
 1. Monocle 1: Trapnell, Cole, et al. "The dynamics and regulators of cell fate decisions are revealed by pseudotemporal ordering of single cells." Nature biotechnology 32.4 (2014): 381-386.
 APA	
 2. Monocle 2: Qiu, Xiaojie, et al. "Single-cell mRNA quantification and differential analysis with Census." Nature methods 14.3 (2017): 309.
 3. Monocle 2: Qiu, Xiaojie, et al. "Reversed graph embedding resolves complex single-cell trajectories." Nature methods (2017).
 
-# Necessary datasets (for example, gene expression matrix, cell or gene annotation file, etc.) can be downloaded from here: 
-https://github.com/cole-trapnell-lab/monocle2-rge-paper
+# Data 
+Necessary datasets (for example, gene expression matrix, cell or gene annotation file, etc.) can be downloaded from here: 
+http://www.gs.washington.edu/~xqiu/proj2/RGE_analysis_data.tar.gz
 
 # Notes
 - Note that users should visit Monocle 2 website (http://cole-trapnell-lab.github.io/monocle-release/) for newest version of Monocle.  
