@@ -112,4 +112,4 @@ Note that this script will first install all necessary R packages. Once the anal
 - Nature_hta_paper: folder storing information on the Olsson dataset
 - RData: RData files saved for each script so data can be loaded by other scripts in the analysis.
 - generate_clustering: Folder storing code/data from Ido Amit on the Paul dataset  
-- tmp: Temporary helper pdf files used in figure annontation during the manuscript preparation 
+- tmp: Temporary helper pdf files used in figure annotation during the manuscript preparation 
